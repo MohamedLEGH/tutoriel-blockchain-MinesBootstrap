@@ -121,7 +121,7 @@ class BitcoinAccount(Account):
         return cls(wif_to_priv(wif))
 
     def to_file(self, file_name=None):
-        if file_name == None:
+        if file_name is None:
             file_name = self.to_address() + ".json"
         super().to_file(file_name)  #  check parameter less
 
